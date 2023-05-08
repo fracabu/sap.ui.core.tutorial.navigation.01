@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="sap.ui.demo.nav.controller.project.ProjectList"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        id="projectListPage"
+        title="{i18n>ProjectList}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+        class="sapUiResponsiveContentPadding">
+        <content>
+            <!-- <List id="projectList" headerText="{i18n>ListOfAllProjects}" items="{/}">
+                <items>
+                    <StandardListItem title="{ProjectName} {ProjectNumber}" iconDensityAware="false"
+                        iconInset="false" />
+                </items>
+            </List> -->
+            <mvc:View
+                xmlns="sap.m"
+                xmlns:form="sap.ui.layout.form"
+                xmlns:mvc="sap.ui.core.mvc">
+                <Panel headerText="{/panelHeaderText}" class="sapUiResponsiveMargin"
+                    width="auto">
+                    <form:SimpleForm editable="true" layout="ResponsiveGridLayout" columnsL="5" labelSpanL="4">
+                        <Label text="Project Number" />
+                        <Input value="{/projectNumber}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="Project Name" />
+                        <Input value="{/projectName}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="File Type" />
+                        <Input value="{/fileType}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="Sales Employee" />
+                        <Input value="{/salesEmployee}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="Project Manager" />
+                        <Input value="{/projectManager}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="Company Code" />
+                        <Input value="{/companyCode}" valueLiveUpdate="true" width="120px"
+                            enabled="{/enabled}" />
+                        <Label text="Plant" />
+                                
+                     
+                       
+
+
+                    </form:SimpleForm>
+                </Panel>
+            </mvc:View>
+
+        </content>
+    </Page>
+</mvc:View>

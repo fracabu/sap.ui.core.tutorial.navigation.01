@@ -1,0 +1,11 @@
+[{
+    "ProjectID": 1,
+		"ProjectName": "Progetto",
+		"ProjectNumber": "Numero",
+		
+		"Projects" : {
+			"__deferred": {
+				"uri": "/here/goes/your/serviceUrl/Projects(1)/Project"
+			}
+		}
+}]

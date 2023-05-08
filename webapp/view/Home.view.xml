@@ -1,0 +1,258 @@
+<mvc:View
+	controllerName="sap.ui.demo.nav.controller.Home"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+>
+	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
+
+		<Panel expandable="true" expanded="false" headerText="GENERAL DATA"
+			class="sapUiResponsiveContentPadding" width="auto">
+			<content>
+				<Table>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="" />
+
+						</Toolbar>
+					</headerToolbar>
+
+					<columns>
+						<Column>
+							<Text text="Project Details" />
+						</Column>
+						<Column>
+							<Text text="Basic Data" />
+						</Column>
+						<Column>
+							<Text text="Addresses" />
+						</Column>
+
+						<Column>
+							<Text text="" />
+						</Column>
+
+						<Column>
+							<Text text="Technical Details" />
+						</Column>
+
+						
+					</columns>
+
+					<items>
+						<ColumnListItem>
+							<cells>
+								
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+								
+
+							</cells>
+							
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+								
+
+							</cells>
+							
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+								
+
+							</cells>
+							
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+								
+
+							</cells>
+							
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+								
+
+							</cells>
+							
+						</ColumnListItem>
+
+
+						<!-- Repetere il blocco di codice precedente per ogni progetto -->
+					</items>
+				</Table>
+
+				<Table>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="TO DO LIST" />
+						</Toolbar>
+					</headerToolbar>
+					<columns>
+						<Column>
+							<Text text="To do date" />
+						</Column>
+						<Column>
+							<Text text="To do notes" />
+						</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+							<cells>
+								<Input value="{path: '/progetto1/colonna1'}" width="30%"/>
+								<TextArea width="70%">
+								</TextArea>
+								
+							</cells>
+						</ColumnListItem>
+						</items>
+				</Table>
+				
+			</content>
+		</Panel>
+
+		<Panel expandable="true" expanded="false" headerText="SERVICES">
+			<content>
+				<Table>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="SERVICES" />
+						</Toolbar>
+					</headerToolbar>
+
+					<columns>
+						<Column>
+							<Text text="Colonna 1" />
+						</Column>
+						<Column>
+							<Text text="Colonna 2" />
+						</Column>
+						<Column>
+							<Text text="Colonna 3" />
+						</Column>
+						<Column>
+							<Text text="Colonna 4" />
+						</Column>
+						<Column>
+							<Text text="Colonna 5" />
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Input value="{path: '/progetto2/colonna1'}" />
+								<Input value="{path: '/progetto2/colonna2'}" />
+								<Input value="{path: '/progetto2/colonna3'}" />
+								<Input value="{path: '/progetto2/colonna4'}" />
+								<Input value="{path: '/progetto2/colonna5'}" />
+							</cells>
+						</ColumnListItem>
+						<!-- Repetere il blocco di codice precedente per ogni progetto -->
+					</items>
+				</Table>
+			</content>
+		</Panel>
+
+		<Panel expandable="true" expanded="false" headerText="LOCATION">
+			<content>
+				<Table>
+					<headerToolbar>
+						<Toolbar>
+							<Title text="LOCATION" />
+						</Toolbar>
+					</headerToolbar>
+
+					<columns>
+						<Column>
+							<Text text="Colonna 1" />
+						</Column>
+						<Column>
+							<Text text="Colonna 2" />
+						</Column>
+						<Column>
+							<Text text="Colonna 3" />
+						</Column>
+						<Column>
+							<Text text="Colonna 4" />
+						</Column>
+						<Column>
+							<Text text="Colonna 5" />
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem>
+							<cells>
+								<Input value="{path: '/progetto1/colonna1'}" />
+								<Input value="{path: '/progetto1/colonna2'}" />
+								<Input value="{path: '/progetto1/colonna3'}" />
+								<Input value="{path: '/progetto1/colonna4'}" />
+								<Input value="{path: '/progetto1/colonna5'}" />
+							</cells>
+						</ColumnListItem>
+						<ColumnListItem>
+							<cells>
+								<Input value="{path: '/progetto2/colonna1'}" />
+								<Input value="{path: '/progetto2/colonna2'}" />
+								<Input value="{path: '/progetto2/colonna3'}" />
+								<Input value="{path: '/progetto2/colonna4'}" />
+								<Input value="{path: '/progetto2/colonna5'}" />
+							</cells>
+						</ColumnListItem>
+						<!-- Repetere il blocco di codice precedente per ogni progetto -->
+					</items>
+				</Table>
+			</content>
+		</Panel>
+
+		<!-- Button nav -->
+		<content>
+			<Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound"
+				class="sapUiTinyMarginEnd" />
+			<Button id="employeeListBtn" text="{i18n>ShowEmployeeList}" press=".onNavToEmployees"
+				class="sapUiTinyMarginEnd" />
+			<Button id="projectListBtn" text="{i18n>ShowProjectList}" press=".onNavToProject"
+				class="sapUiTinyMarginEnd" />
+
+		</content>
+	</Page>
+</mvc:View>
