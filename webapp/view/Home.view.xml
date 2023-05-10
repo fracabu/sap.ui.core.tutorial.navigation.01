@@ -9,108 +9,60 @@
 		<Panel expandable="true" expanded="false" headerText="GENERAL DATA"
 			class="sapUiResponsiveContentPadding" width="auto">
 			<content>
-				<Table>
-					<headerToolbar>
-						<Toolbar>
-							<Title text="" />
 
-						</Toolbar>
-					</headerToolbar>
 
-					<columns>
-						<Column>
-							<Text text="Project Details" />
-						</Column>
-						<Column>
-							<Text text="Basic Data" />
-						</Column>
-						<Column>
-							<Text text="Addresses" />
-						</Column>
-
-						<Column>
-							<Text text="" />
-						</Column>
-
-						<Column>
-							<Text text="Technical Details" />
-						</Column>
-
-						
-					</columns>
-
+				<!-- ColumnListItem con input e label -->
+				<List>
 					<items>
-						<ColumnListItem>
-							<cells>
-								
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-								
 
-							</cells>
-							
-						</ColumnListItem>
-						<ColumnListItem>
-							<cells>
-								
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-								
+						<CustomListItem>
+							<FlexBox>
+								<HBox>
+									<VBox>
+										<VBox alignItems="Start" class="">
+											<Title text="Titolo della colonna" />
+										</VBox>
+										<Label text="Colonna 1" />
+										<Input class="sapUiMarginSmall" />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+									</VBox>
 
-							</cells>
-							
-						</ColumnListItem>
-						<ColumnListItem>
-							<cells>
-								
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-								
+									<VBox>
+										<VBox alignItems="Start">
+											<Title text="Titolo della colonna" />
+										</VBox>
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+										<Label text="Colonna 1" />
+										<Input />
+									</VBox>
+								</HBox>
+							</FlexBox>
 
-							</cells>
-							
-						</ColumnListItem>
-						<ColumnListItem>
-							<cells>
-								
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-								
+						</CustomListItem>
 
-							</cells>
-							
-						</ColumnListItem>
-						<ColumnListItem>
-							<cells>
-								
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-								
-
-							</cells>
-							
-						</ColumnListItem>
-
-
-						<!-- Repetere il blocco di codice precedente per ogni progetto -->
 					</items>
-				</Table>
+				</List>
 
+
+				<!-- To do list subsection -->
 				<Table>
 					<headerToolbar>
 						<Toolbar>
@@ -124,19 +76,19 @@
 						<Column>
 							<Text text="To do notes" />
 						</Column>
-						</columns>
-						<items>
-							<ColumnListItem>
+					</columns>
+					<items>
+						<ColumnListItem>
 							<cells>
-								<Input value="{path: '/progetto1/colonna1'}" width="30%"/>
+								<Input value="{path: '/progetto1/colonna1'}" width="30%" />
 								<TextArea width="70%">
 								</TextArea>
-								
+
 							</cells>
 						</ColumnListItem>
-						</items>
+					</items>
 				</Table>
-				
+
 			</content>
 		</Panel>
 
