@@ -16,46 +16,121 @@
 					<items>
 
 						<CustomListItem>
-							<FlexBox>
-								<HBox>
-									<VBox>
-										<VBox alignItems="Start" class="">
-											<Title text="Titolo della colonna" />
-										</VBox>
-										<Label text="Colonna 1" />
-										<Input class="sapUiMarginSmall" />
-										<Label text="Colonna 1" />
-										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-									</VBox>
 
-									<VBox>
-										<VBox alignItems="Start">
-											<Title text="Titolo della colonna" />
+							<HBox>
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Project Details" />
 										</VBox>
-										<Label text="Colonna 1" />
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+										<Label text="Project number" />
+										<Input editable="false" />
+										<Label text="Project name" />
 										<Input />
-										<Label text="Colonna 1" />
+										<Label text="File Type" />
 										<Input />
-										<Label text="Colonna 1" />
+										<Label text="Sales Employee" />
 										<Input />
-										<Label text="Colonna 1" />
+										<Label text="Coordinator" />
 										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-										<Label text="Colonna 1" />
-										<Input />
-									</VBox>
-								</HBox>
-							</FlexBox>
+										<Label text="Company code" />
+										<Input editable="false" />
+										<Label text="Plant" />
+										<Input editable="false" />
+									</FlexBox>
+								</VBox>
 
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Basic Data" />
+										</VBox>
+										<Label text="Customer name" />
+										<Input editable="true" />
+										<Label text="Account" />
+										<Input editable="true" />
+										<Label text="Booking Agent" />
+										<Input editable="true" />
+										<Label text="Bill to 1" />
+										<Input editable="true" />
+										<Label text="Bill to 2" />
+										<Input editable="true" />
+										<Label text="Bill to 3" />
+										<Input editable="true" />
+									</FlexBox>
+								</VBox>
+
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Addresses" />
+										</VBox>
+										<Label text="Origin 1" />
+										<Input editable="true" />
+										<Label text="Origin 2" />
+										<Input editable="true" />
+										<Label text="Origin 3" />
+										<Input editable="true" />
+
+									</FlexBox>
+								</VBox>
+
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Destination" />
+										</VBox>
+										<Label text="Destination 1" />
+										<Input editable="true" />
+										<Label text="Destination 2" />
+										<Input editable="true" />
+										<Label text="Destination 3" />
+										<Input editable="true" />
+
+									</FlexBox>
+								</VBox>
+
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin" >
+										<VBox>
+											<Title text="Technical Details" />
+										</VBox>
+										<HBox >
+											<Label text="Allowance"/>
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+										<Label text="Tolerance" />
+										<CheckBox text="Option a" selected="true" />
+										</HBox>
+										<HBox>
+										<Label text="Tolerance" />
+										<CheckBox text="Option a" selected="true" />
+										</HBox>
+
+
+									</FlexBox>
+								</VBox>
+
+							</HBox>
 						</CustomListItem>
 
 					</items>
