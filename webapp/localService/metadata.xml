@@ -20,17 +20,6 @@
 				<NavigationProperty Name="Resume" Relationship="NavigationModel.FK_Employees_Resumes" FromRole="Employees" ToRole="Resumes"/>
 			</EntityType>
 
-			<EntityType Name="Project">
-				<Key>
-					<PropertyRef Name="ProjectID"/>
-				</Key>
-				<Property Name="ProjectID" Type="Edm.Int32" Nullable="false" p8:StoreGeneratedPattern="Identity" xmlns:p8="http://schemas.microsoft.com/ado/2009/02/edm/annotation"/>
-				<Property Name="ProjectName" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false"/>
-				<Property Name="ProjectNumber" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false"/>
-				<NavigationProperty Name="Resume" Relationship="NavigationModel.FK_Projects_Resumes" FromRole="Projects" ToRole="Resumes"/>
-				
-			</EntityType>
-
 			<EntityType Name="Resume">
 				<Key>
 					<PropertyRef Name="ResumeID"/>

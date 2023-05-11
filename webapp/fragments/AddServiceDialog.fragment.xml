@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Aggiungi un nuovo servizio">
+        <content>
+            <Input label="Nome" />
+            <Input label="Descrizione" />
+        </content>
+        <beginButton>
+            <Button text="Salva" press="onSaveService" />
+        </beginButton>
+        <endButton>
+            <Button text="Annulla" press="onCancelService" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

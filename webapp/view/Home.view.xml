@@ -5,18 +5,15 @@
 	xmlns:f="sap.ui.layout.form"
 >
 	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
-
+		<!-- PANNELLO GENERAL -->
 		<Panel expandable="true" expanded="false" headerText="GENERAL DATA"
 			class="sapUiResponsiveContentPadding" width="auto">
 			<content>
-
-
-				<!-- ColumnListItem con input e label -->
+				<!-- lista di colonne di input e label -->
 				<List>
 					<items>
-
-						<CustomListItem>
-
+						<CustomListItem class="sapUiResponsiveMargin">
+							<!-- Project Details -->
 							<HBox>
 								<VBox>
 									<FlexBox direction="Column" alignItems="Start"
@@ -42,8 +39,8 @@
 										<Input editable="false" />
 									</FlexBox>
 								</VBox>
-
-								<VBox>
+								<!-- Basic Data -->
+								<VBox alignContent="Center">
 									<FlexBox direction="Column" alignItems="Start"
 										class="sapUiSmallMargin">
 										<VBox>
@@ -63,7 +60,7 @@
 										<Input editable="true" />
 									</FlexBox>
 								</VBox>
-
+								<!-- Addresses -->
 								<VBox>
 									<FlexBox direction="Column" alignItems="Start"
 										class="sapUiSmallMargin">
@@ -76,10 +73,9 @@
 										<Input editable="true" />
 										<Label text="Origin 3" />
 										<Input editable="true" />
-
 									</FlexBox>
 								</VBox>
-
+								<!-- Destination -->
 								<VBox>
 									<FlexBox direction="Column" alignItems="Start"
 										class="sapUiSmallMargin">
@@ -92,38 +88,117 @@
 										<Input editable="true" />
 										<Label text="Destination 3" />
 										<Input editable="true" />
-
+									</FlexBox>
+								</VBox>
+								<!-- Technical Details -->
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Technical Details" />
+										</VBox>
+										<HBox>
+											<Label text="Allowance" />
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<Input editable="true" width="70%" />
+											<Input editable="true" width="30%" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<CheckBox text="Option a" selected="true" />
+										</HBox>
+										<HBox>
+											<Label text="Tolerance" />
+											<CheckBox text="Option a" selected="true" />
+										</HBox>
+									</FlexBox>
+								</VBox>
+							</HBox>
+						</CustomListItem>
+					</items>
+				</List>
+				<!-- Lista colonne Status Dates Notes -->
+				<List>
+					<items>
+						<CustomListItem class="sapUiResponsiveMargin">
+							<HBox>
+								<!-- Status -->
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMargin">
+										<VBox>
+											<Title text="Status" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+									</FlexBox>
+								</VBox>
+								<!-- Dates -->
+								<VBox>
+									<FlexBox direction="Column" alignItems="Start"
+										class="sapUiSmallMarginTop">
+										<VBox>
+											<Title text="Dates" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="true" />
+										<Label text="Opportunity number" />
+										<Input editable="false" />
 									</FlexBox>
 								</VBox>
 
 								<VBox>
-									<FlexBox direction="Column" alignItems="Start"
-										class="sapUiSmallMargin" >
+									<FlexBox direction="Column" alignItems="Center"
+									>
 										<VBox>
-											<Title text="Technical Details" />
+											<Title text="Dates" class="sapUiSmallMarginTop" />
 										</VBox>
-										<HBox >
-											<Label text="Allowance"/>
-											<Input editable="true" width="70%" />
-											<Input editable="true" width="30%" />
+										<HBox>
+											<Label text="Start Date" class="sapUiMediumMarginTop" />
+											<DatePicker
+												value="{path: '/dateValue'}"
+												displayFormat="dd.MM.yyyy"
+												valueFormat="yyyy-MM-dd" />
 										</HBox>
 										<HBox>
-											<Label text="Tolerance" />
-											<Input editable="true" width="70%" />
-											<Input editable="true" width="30%" />
+											<Label text="End Date" class="sapUiSmallMarginTop" />
+											<DatePicker
+												value="{path: '/dateValue'}"
+												displayFormat="dd.MM.yyyy"
+												valueFormat="yyyy-MM-dd" />
 										</HBox>
 										<HBox>
-											<Label text="Tolerance" />
-											<Input editable="true" width="70%" />
-											<Input editable="true" width="30%" />
+											<Label text="Open Date" class="sapUiSmallMarginTop" />
+											<DatePicker
+												value="{path: '/dateValue'}"
+												displayFormat="dd.MM.yyyy"
+												valueFormat="yyyy-MM-dd" />
 										</HBox>
-										<HBox>
-										<Label text="Tolerance" />
-										<CheckBox text="Option a" selected="true" />
-										</HBox>
-										<HBox>
-										<Label text="Tolerance" />
-										<CheckBox text="Option a" selected="true" />
+
+										<HBox class="sapUiLargeMarginTop" width="100%">
+											<Label text="Note" textAlign="Center" />
+											<TextArea value="inserire testo" editable="true"
+												maxLength="1000" width="600px">
+											</TextArea>
 										</HBox>
 
 
@@ -132,13 +207,12 @@
 
 							</HBox>
 						</CustomListItem>
-
 					</items>
 				</List>
 
 
 				<!-- To do list subsection -->
-				<Table>
+				<Table id="toDoTable">
 					<headerToolbar>
 						<Toolbar>
 							<Title text="TO DO LIST" />
@@ -151,14 +225,16 @@
 						<Column>
 							<Text text="To do notes" />
 						</Column>
+						<Column>
+							<Text text="" />
+						</Column>
 					</columns>
 					<items>
 						<ColumnListItem>
 							<cells>
-								<Input value="{path: '/progetto1/colonna1'}" width="30%" />
-								<TextArea width="70%">
-								</TextArea>
-
+								<Input value="{path: '/toDoList/0/date'}" width="30%" />
+								<TextArea value="{path: '/toDoList/0/notes'}" width="100%" />
+								<Button text="Save" press="onSaveRowPress" />
 							</cells>
 						</ColumnListItem>
 					</items>
@@ -166,59 +242,81 @@
 
 			</content>
 		</Panel>
-
+		<!-- PANNELLO SERVIZI -->
 		<Panel expandable="true" expanded="false" headerText="SERVICES">
+
+
 			<content>
-				<Table>
-					<headerToolbar>
-						<Toolbar>
-							<Title text="SERVICES" />
-						</Toolbar>
-					</headerToolbar>
 
-					<columns>
-						<Column>
-							<Text text="Colonna 1" />
-						</Column>
-						<Column>
-							<Text text="Colonna 2" />
-						</Column>
-						<Column>
-							<Text text="Colonna 3" />
-						</Column>
-						<Column>
-							<Text text="Colonna 4" />
-						</Column>
-						<Column>
-							<Text text="Colonna 5" />
-						</Column>
-					</columns>
-
+				<HBox alignItems="Center">
+					<Label text="Crea Nuovo Servizio"></Label>
+					<Button icon="sap-icon://add" press="onPressAddNewService"></Button>
+				</HBox>
+				<!-- Lista colonne Service -->
+				<List>
 					<items>
-						<ColumnListItem>
-							<cells>
-								<Input value="{path: '/progetto1/colonna1'}" />
-								<Input value="{path: '/progetto1/colonna2'}" />
-								<Input value="{path: '/progetto1/colonna3'}" />
-								<Input value="{path: '/progetto1/colonna4'}" />
-								<Input value="{path: '/progetto1/colonna5'}" />
-							</cells>
-						</ColumnListItem>
-						<ColumnListItem>
-							<cells>
-								<Input value="{path: '/progetto2/colonna1'}" />
-								<Input value="{path: '/progetto2/colonna2'}" />
-								<Input value="{path: '/progetto2/colonna3'}" />
-								<Input value="{path: '/progetto2/colonna4'}" />
-								<Input value="{path: '/progetto2/colonna5'}" />
-							</cells>
-						</ColumnListItem>
-						<!-- Repetere il blocco di codice precedente per ogni progetto -->
+						<CustomListItem>
+							<FlexBox justifyContent="SpaceBetween">
+								<HBox>
+									<VBox>
+										<VBox>
+											<Title text="Project Details" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<VBox>
+											<Title text="Project Details" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<VBox>
+											<Title text="Project Details" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+									</VBox>
+								</HBox>
+								<HBox>
+									<VBox>
+										<VBox>
+											<Title text="Project Details" />
+										</VBox>
+										<Label text="Opportunity number" />
+										<Input editable="false" />
+									</VBox>
+								</HBox>
+							</FlexBox>
+						</CustomListItem>
 					</items>
-				</Table>
-			</content>
-		</Panel>
+				</List>
 
+			</content>
+			<Dialog id="newServiceDialog" title="Nuovo Servizio">
+				<content>
+					<!-- inserisci qui i controlli per inserire i dati del nuovo servizio -->
+					<Label text="Service" />
+					<Input editable="false" />
+
+				</content>
+			
+				<beginButton>
+					<Button text="Salva" press="onPressSaveNewService" />
+				</beginButton>
+			
+				<endButton>
+					<Button text="Annulla" press="onPressCancelNewService" />
+				</endButton>
+			</Dialog>
+		</Panel>
+		<!-- PANNELLO LOCATION -->
 		<Panel expandable="true" expanded="false" headerText="LOCATION">
 			<content>
 				<Table>
