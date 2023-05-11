@@ -107,8 +107,17 @@
 					"pattern": "projects/{projectId}",
 					"name": "project",
 					"target": "project"
+				},
+				{
+					"pattern": "services",
+					"name": "ServiceList",
+					"target": "services"
+				},
+				{
+					"pattern": "services/{serviceId}",
+					"name": "service",
+					"target": "service"
 				}
-				
 			],
 			"targets": {
 				"home": {
@@ -164,6 +173,17 @@
 					"name": "ResumeNotes",
 					"controlId": "notesTab",
 					"controlAggregation": "content"
+				},
+				"services": {
+					"id": "serviceList",
+					"path": "sap.ui.demo.nav.view.service",
+					"name": "ServiceList",
+					"level": 7
+				},
+				"service": {
+					"id": "service",
+					"name": "service.Service",
+					"level": 8
 				}
 			}
 		}
