@@ -1,23 +1,23 @@
 {
-    "projects": [
+    "services": [
         {
             "id": "1",
-            "name": "Project 1",
-            "description": "Description of Project 1",
+            "name": "service 1",
+            "description": "Description of service 1",
             "status": "Open",
             "priority": "High"
         },
         {
             "id": "2",
-            "name": "Project 2",
-            "description": "Description of Project 2",
+            "name": "service 2",
+            "description": "Description of service 2",
             "status": "In Progress",
             "priority": "Medium"
         },
         {
             "id": "3",
-            "name": "Project 3",
-            "description": "Description of Project 3",
+            "name": "service 3",
+            "description": "Description of service 3",
             "status": "Closed",
             "priority": "Low"
         }
