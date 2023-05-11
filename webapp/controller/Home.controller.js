@@ -18,6 +18,16 @@ sap.ui.define([
 				}
 			});
 			this.getView().setModel(oViewModel, "view");
+			
+			// check if mockdata model is available
+			var oMockDataModel = this.getView().getModel("mockdata");
+			if (oMockDataModel) {
+				console.log("Mock data model available");
+			} else {
+				console.log("Mock data model not available");
+			}
+			
+
 		},
 
 		onPressAddNewService: function () {
@@ -51,7 +61,7 @@ sap.ui.define([
 		// Function to handle the "Annulla" button press
 		onPressCancelNewService: function () {
 			// Reset the model data and close the dialog
-			const oModel = this.getView().getModel("mockdata");
+			const oModel = this.getView().getModel("mockdata/");
 			oModel.setData({});
 			this.byId("newServiceDialog").close();
 		},
