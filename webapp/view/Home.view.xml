@@ -6,7 +6,25 @@
 	xmlns:core="sap.ui.core"
 	xmlns:tnt="sap.tnt"
 >
-	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
+	<Page class="sapUiResponsiveContentPadding">
+
+		<Panel class="myCustomPanel">
+			<headerToolbar  >
+				<Toolbar >
+					<content>
+						<HBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+							
+							<Text text="GENERAL DATA" class="panel-text" />
+							<Text text="TO DO LIST" />
+							<Text text="SERVICES" />
+							<Text text="ATTACCHMENTS" />
+							<Text text="STAMPE" />
+						</HBox>
+					</content>
+				</Toolbar>
+			</headerToolbar>
+			
+		</Panel>
 
 
 		<!-- PANNELLO GENERAL -->
@@ -169,7 +187,6 @@
 										<Input editable="false" />
 									</FlexBox>
 								</VBox>
-
 								<VBox>
 									<FlexBox direction="Column" alignItems="Center"
 									>
@@ -197,24 +214,18 @@
 												displayFormat="dd.MM.yyyy"
 												valueFormat="yyyy-MM-dd" />
 										</HBox>
-
 										<HBox class="sapUiLargeMarginTop" width="100%">
 											<Label text="Note" textAlign="Center" />
 											<TextArea value="inserire testo" editable="true"
 												maxLength="1000" width="600px">
 											</TextArea>
 										</HBox>
-
-
 									</FlexBox>
 								</VBox>
-
 							</HBox>
 						</CustomListItem>
 					</items>
 				</List>
-
-
 				<!-- To do list subsection -->
 				<Table id="toDoTable">
 					<headerToolbar>
@@ -243,13 +254,10 @@
 						</ColumnListItem>
 					</items>
 				</Table>
-
 			</content>
 		</Panel>
-
-
 		<!-- PANNELLO SERVIZI -->
-		<Panel id="panelId"  expandable="true">
+		<Panel id="panelId" expandable="true" class="sapUiResponsiveContentPadding">
 			<headerToolbar>
 				<Toolbar>
 					<Button icon="sap-icon://expand-group" press="onPressExpandCollapse" />
@@ -257,22 +265,19 @@
 					<Title text="SERVICES"></Title>
 				</Toolbar>
 			</headerToolbar>
-
 			<content>
 				<!-- Lista colonne Service -->
-
-				<List >
+				<List>
 					<items>
-						<CustomListItem >
+						<CustomListItem>
 							<FlexBox justifyContent="Start">
-
 								<HBox alignItems="Center">
 									<VBox>
 										<Button icon="sap-icon://expand-group"
 											press="onPressExpandCollapse" />
 									</VBox>
 								</HBox>
-								<HBox class="sapUiSmallMargin" >
+								<HBox class="sapUiSmallMargin">
 									<VBox>
 										<Label text="Opportunity number" />
 										<Input editable="false" />
@@ -280,14 +285,12 @@
 								</HBox>
 								<HBox class="sapUiSmallMargin">
 									<VBox>
-
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
 								</HBox>
 								<HBox class="sapUiSmallMargin">
 									<VBox>
-
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
@@ -303,39 +306,50 @@
 					</items>
 				</List>
 				<Dialog id="newServiceDialog" title="Nuovo Servizio">
-				<content>
-					<!-- inserisci qui i controlli per inserire i dati del nuovo servizio -->
-					<Label text="Servizio" />
-					<Input editable="true" />
-					<Label text="Descrizione" />
-					<TextArea value="{/description}" />
-					<Label text="Stato" />
-					<Select selectedKey="{/status}">
-						<core:Item key="1" text="In corso" />
-						<core:Item key="2" text="Completato" />
-						<core:Item key="3" text="Annullato" />
-					</Select>
-				</content>
-
-				<beginButton>
-					<Button text="Salva" press="onPressSaveNewService" />
-				</beginButton>
-
-				<endButton>
-					<Button text="Annulla" press="onPressCancelNewService" />
-				</endButton>
-			</Dialog>
-
+					<content>
+						<!-- inserisci qui i controlli per inserire i dati del nuovo servizio -->
+						<VBox class="sapUiSmallMargin">
+							<Label text="Servizio" />
+							<Select selectedKey="{/status}">
+								<core:Item key="1" text="Trasporto" />
+								<core:Item key="2" text="Carico" />
+								<core:Item key="3" text="Scarico" />
+								<core:Item key="4" text="Trasporto e carico" />
+								<core:Item key="5" text="Trasporto e scarico" />
+								<core:Item key="6" text="Trasporto,carico e scarico" />
+							</Select>
+							<Label text="Cliente" />
+							<Input editable="true" />
+							<Label text="Start Date" class="sapUiMediumMarginTop" />
+							<DatePicker
+								value="{path: '/dateValue'}"
+								displayFormat="dd.MM.yyyy"
+								valueFormat="yyyy-MM-dd" />
+							<Label text="End Date" class="sapUiMediumMarginTop" />
+							<DatePicker
+								value="{path: '/dateValue'}"
+								displayFormat="dd.MM.yyyy"
+								valueFormat="yyyy-MM-dd" />
+							<Label text="Stato" />
+							<Select selectedKey="{/status}">
+								<core:Item key="1" text="In corso" />
+								<core:Item key="2" text="Completato" />
+								<core:Item key="3" text="Annullato" />
+							</Select>
+						</VBox>
+					</content>
+					<beginButton>
+						<Button text="Salva" press="onPressSaveNewService" />
+					</beginButton>
+					<endButton>
+						<Button text="Annulla" press="onPressCancelNewService" />
+					</endButton>
+				</Dialog>
 			</content>
-
 		</Panel>
-
-		
-			
-		
-
 		<!-- PANNELLO LOCATION -->
-		<Panel expandable="true" expanded="false" headerText="LOCATION">
+		<Panel expandable="true" expanded="false" headerText="LOCATION"
+			class="sapUiResponsiveContentPadding">
 			<content>
 				<Table>
 					<headerToolbar>
@@ -343,7 +357,6 @@
 							<Title text="LOCATION" />
 						</Toolbar>
 					</headerToolbar>
-
 					<columns>
 						<Column>
 							<Text text="Colonna 1" />
@@ -361,7 +374,6 @@
 							<Text text="Colonna 5" />
 						</Column>
 					</columns>
-
 					<items>
 						<ColumnListItem>
 							<cells>
@@ -386,7 +398,6 @@
 				</Table>
 			</content>
 		</Panel>
-
 		<!-- Button nav -->
 		<content>
 			<Button id="displayNotFoundBtn" text="{i18n>DisplayNotFound}" press=".onDisplayNotFound"
@@ -397,7 +408,5 @@
 				class="sapUiTinyMarginEnd" />
 
 		</content>
-	
-		
 	</Page>
 </mvc:View>

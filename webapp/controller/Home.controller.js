@@ -68,7 +68,7 @@ sap.ui.define([
 		onPressCancelNewService: function () {
 			// Reset the model data and close the dialog
 			const oModel = this.getView().getModel("mockdata");
-			oModel.setData({});
+			oModel.setProperty([]);
 			this.byId("newServiceDialog").close();
 		},
 
@@ -93,7 +93,7 @@ sap.ui.define([
 
 		//funzione pannello di prova
 		onPressExpandCollapse: function() {
-			var oPanel = this.getView().byId("panelId","panelId2");
+			var oPanel = this.getView().byId("panelId");
 			oPanel.setExpanded(!oPanel.getExpanded());
 		}
 	});

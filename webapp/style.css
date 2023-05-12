@@ -1,3 +1,7 @@
-.column-title{
-    font-weight: bold;
+.myCustomPanel {
+    background-color: #3a70a7;
+   
 }
+.panel-text {
+    color: red;
+  }
