@@ -23,6 +23,14 @@
 					"odataVersion": "2.0",
 					"localUri": "localService/metadata.xml"
 				}
+			},
+			"serviceRemote": {
+				"uri": "http://localhost:8080/localService/mockdata/Services.json",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/mockdata/Services.json"
+				}
 			}
 		}
 	},

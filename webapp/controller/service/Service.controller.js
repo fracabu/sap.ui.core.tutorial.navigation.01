@@ -8,31 +8,19 @@ sap.ui.define([
 		onInit: function () {
 			var oRouter = this.getRouter();
 
-			oRouter.getRoute("service").attachMatched(this._onRouteMatched, this);
-
-			// Hint: we don't want to do it this way
-			/*
-			 oRouter.attachRouteMatched(function (oEvent){
-				 var sRouteName, oArgs, oView;
-
-				 sRouteName = oEvent.getParameter("name");
-				 if (sRouteName === "service"){
-				 	this._onRouteMatched(oEvent);
-				 }
-			 }, this);
-			 */
+			oRouter.getRoute("services").attachMatched(this._onRouteMatched, this);
 
 		},
 
-		_onRouteMatched : function (oEvent) {
+		_onRouteMatched: function (oEvent) {
 			var oArgs, oView;
 
 			oArgs = oEvent.getParameter("arguments");
 			oView = this.getView();
 
 			oView.bindElement({
-				path : "/services(" + oArgs.serviceId + ")",
-				events : {
+				path: "/Services(" + oArgs.serviceId + ")",
+				events: {
 					change: this._onBindingChange.bind(this),
 					dataRequested: function (oEvent) {
 						oView.setBusy(true);
@@ -44,18 +32,18 @@ sap.ui.define([
 			});
 		},
 
-		_onBindingChange : function (oEvent) {
+		_onBindingChange: function (oEvent) {
 			// No data for the binding
 			if (!this.getView().getBindingContext()) {
 				this.getRouter().getTargets().display("notFound");
 			}
 		},
 
-		onShowResume : function (oEvent) {
+		onShowResume: function (oEvent) {
 			var oCtx = this.getView().getBindingContext();
 
 			this.getRouter().navTo("serviceResume", {
-				serviceId : oCtx.getProperty("serviceID")
+				serviceId: oCtx.getProperty("ServiceID")
 			});
 		}
 

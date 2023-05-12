@@ -4,8 +4,11 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
 >
 	<Page title="{i18n>homePageTitle}" class="sapUiResponsiveContentPadding">
+
+
 		<!-- PANNELLO GENERAL -->
 		<Panel expandable="true" expanded="false" headerText="GENERAL DATA"
 			class="sapUiResponsiveContentPadding" width="auto">
@@ -243,53 +246,54 @@
 
 			</content>
 		</Panel>
-		<!-- PANNELLO SERVIZI -->
-		<Panel expandable="true" expanded="false" headerText="SERVICES">
 
+
+		<!-- PANNELLO SERVIZI -->
+		<Panel id="panelId"  expandable="true">
+			<headerToolbar>
+				<Toolbar>
+					<Button icon="sap-icon://expand-group" press="onPressExpandCollapse" />
+					<Button icon="sap-icon://add" press="onPressAddNewService" />
+					<Title text="SERVICES"></Title>
+				</Toolbar>
+			</headerToolbar>
 
 			<content>
-
-				<HBox alignItems="Center">
-					<Label text="Crea Nuovo Servizio"></Label>
-					<Button icon="sap-icon://add" press="onPressAddNewService"></Button>
-				</HBox>
 				<!-- Lista colonne Service -->
-				<List>
+
+				<List >
 					<items>
-						<CustomListItem>
-							<FlexBox justifyContent="SpaceBetween">
-								<HBox>
+						<CustomListItem >
+							<FlexBox justifyContent="Start">
+
+								<HBox alignItems="Center">
 									<VBox>
-										<VBox>
-											<Title text="Project Details" />
-										</VBox>
+										<Button icon="sap-icon://expand-group"
+											press="onPressExpandCollapse" />
+									</VBox>
+								</HBox>
+								<HBox class="sapUiSmallMargin" >
+									<VBox>
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
 								</HBox>
-								<HBox>
+								<HBox class="sapUiSmallMargin">
 									<VBox>
-										<VBox>
-											<Title text="Project Details" />
-										</VBox>
+
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
 								</HBox>
-								<HBox>
+								<HBox class="sapUiSmallMargin">
 									<VBox>
-										<VBox>
-											<Title text="Project Details" />
-										</VBox>
+
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
 								</HBox>
-								<HBox>
+								<HBox class="sapUiSmallMargin">
 									<VBox>
-										<VBox>
-											<Title text="Project Details" />
-										</VBox>
 										<Label text="Opportunity number" />
 										<Input editable="false" />
 									</VBox>
@@ -298,9 +302,7 @@
 						</CustomListItem>
 					</items>
 				</List>
-
-			</content>
-			<Dialog id="newServiceDialog" title="Nuovo Servizio">
+				<Dialog id="newServiceDialog" title="Nuovo Servizio">
 				<content>
 					<!-- inserisci qui i controlli per inserire i dati del nuovo servizio -->
 					<Label text="Servizio" />
@@ -323,7 +325,15 @@
 					<Button text="Annulla" press="onPressCancelNewService" />
 				</endButton>
 			</Dialog>
+
+			</content>
+
 		</Panel>
+
+		
+			
+		
+
 		<!-- PANNELLO LOCATION -->
 		<Panel expandable="true" expanded="false" headerText="LOCATION">
 			<content>
@@ -387,5 +397,7 @@
 				class="sapUiTinyMarginEnd" />
 
 		</content>
+	
+		
 	</Page>
 </mvc:View>

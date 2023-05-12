@@ -18,7 +18,7 @@ sap.ui.define([
 				}
 			});
 			this.getView().setModel(oViewModel, "view");
-			
+
 			// check if mockdata model is available
 			var oMockDataModel = this.getView().getModel("mockdata");
 			if (oMockDataModel) {
@@ -26,7 +26,7 @@ sap.ui.define([
 			} else {
 				console.log("Mock data model not available");
 			}
-			
+
 
 		},
 
@@ -35,10 +35,16 @@ sap.ui.define([
 		},
 
 		onPressSaveNewService: function () {
-			const oModel = this.getView().getModel("mockdata");
-			oModel.refresh();
-			const oNewService = oModel.getData();
-			const oServices = oModel.getProperty("/services");
+			const oModel = this.getView().getModel("mockdata/Services.json");
+			const oNewService = {
+				id: "1",
+				name: "service 1",
+				description: "Description of service 1",
+				status: "Open",
+				priority: "High"
+			};
+			
+			const oServices = oModel.getProperty("/services.json");
 			const iNewServiceId = oServices.length + 1; // calcola l'id del nuovo servizio
 
 			// Add the new service to the "services" array
@@ -61,7 +67,7 @@ sap.ui.define([
 		// Function to handle the "Annulla" button press
 		onPressCancelNewService: function () {
 			// Reset the model data and close the dialog
-			const oModel = this.getView().getModel("mockdata/");
+			const oModel = this.getView().getModel("mockdata");
 			oModel.setData({});
 			this.byId("newServiceDialog").close();
 		},
@@ -83,6 +89,12 @@ sap.ui.define([
 
 		onCloseDialog: function () {
 			this._oDialog.close();
+		},
+
+		//funzione pannello di prova
+		onPressExpandCollapse: function() {
+			var oPanel = this.getView().byId("panelId","panelId2");
+			oPanel.setExpanded(!oPanel.getExpanded());
 		}
 	});
 });
